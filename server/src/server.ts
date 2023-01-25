@@ -2,7 +2,7 @@ import bodyParser from "body-parser";
 import express from "express";
 
 import connectDB from "../config/database";
-import profile from "./routes/api/profile";
+import routes from "./routes/api/routes";
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.get("/", (_req, res) => {
   res.send("API Running");
 });
 
-app.use("/api/routes", profile);
+app.use("/api/routes", routes);
 
 const port = app.get("port");
 const server = app.listen(port, () =>

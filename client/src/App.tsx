@@ -64,7 +64,7 @@ function App() {
 
       {activeRoute != null && <PlayRouteControls route={activeRoute}
                                                  playPercent={progress}
-                                                 progressChanged={event => setProgress(event.target.value)} />}
+                                                 progressChanged={percent => setProgress(percent)} />}
     </Box>
   );
 

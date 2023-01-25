@@ -35,7 +35,7 @@ export function PlayRouteControls(props: PlayRouteControlsParams) {
 
       <Slider sx={{ width: "90%", marginRight: 2, marginLeft: 4 }}
               value={props.playPercent}
-              onChange={(event) => props.progressChanged(event)}
+              onChange={(event) => props.progressChanged((event as any).target.value)}
               valueLabelDisplay="auto"
               min={0}
               step={1}
